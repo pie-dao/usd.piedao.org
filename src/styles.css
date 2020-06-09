@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100,300,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik:100,300,500,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind media;
+
+/* Custom css */
+/* purgecss start ignore */
+
+/* Header */
+
+.header-container {
+  @apply content font-secondary;
+}
+
+.header-container .hamburger {
+  @apply border-none no-underline p-0 ml-20px;
+}
+
+.header-container .hamburger:hover, .header-container .hamburger:focus {
+  outline: none;
+}
+
+.header-container .left {
+  @apply flex flex-grow items-center;
+}
+
+.header-container .left img {
+  @apply h-30px;
+}
+
+.header-container .right {
+  @apply flex flex-grow items-center justify-end;
+}
+
+.header-container .right .link {
+  @apply text-grey-10 no-underline ml-8 text-sm hidden;
+}
+
+.header-container .right .link:hover {
+  @apply opacity-60;
+}
+
+.header-container .right .mobile-placeholder {
+  @apply hidden;
+}
+
+.header-container nav {
+  @apply text-center relative top-60pc no-underline;
+  /* font-size: 1.2rem; */
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.header-container ul {
+  @apply list-none p-0 my-0 mx-auto inline-block h-100pc relative;
+}
+
+.header-container ul li {
+  @apply block h-20pc min-h-54px;
+}
+
+.header-container ul li a {
+  @apply font-normal block text-white no-underline;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.header-container ul li a:hover,
+.header-container ul li a:focus {
+  @apply text-white;
+}
+
+@screen lg {
+  .header-container .hamburger {
+    @apply hidden;
+  }
+
+  .header-container .left img {
+    @apply h-50px;
+  }
+
+  .header-container .right .link {
+    @apply block;
+  }
+
+  .header-container .right .mobile-placeholder {
+    @apply block;
+  }
+
+  .header-container .connect-button-container {
+    @apply ml-8;
+  }
+}
+
+/* Footer */
+
+.footer-container {
+  @apply content font-secondary;
+}
+
+.footer-container .left {
+  @apply flex flex-row flex-grow items-center;
+}
+
+.footer-container .right {
+  @apply flex flex-row flex-grow items-center justify-end;
+}
+
+.footer-container .footer-link {
+  @apply text-grey-10 no-underline mt-14px text-xxs;
+}
+
+.footer-container .footer-link:hover {
+  @apply opacity-60;
+}
+
+.footer-container .aragon {
+  @apply h-30px mt-10px;
+}
+
+@screen lg {
+  .footer-container .right {
+    @apply ml-8;
+  }
+
+  .footer-container .footer-link {
+    @apply ml-8;
+  }
+
+  .footer-container .footer-link:first-child {
+    @apply block ml-0;
+  }
+
+  .footer-container .aragon {
+    @apply ml-20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-container {
+    flex-direction: column;
+  }
+
+  .footer-container .left {
+    flex-direction: column;
+  }
+
+  .footer-container .right {
+    flex-direction: column;
+  }
+}
+
+/* Landing */
+
+.landing-container, .liquidity-container {
+  @apply text-center flex-col font-normal;
+}
+
+/* PoolBalance */
+
+.pool-balance-container h1 {
+  @apply text-xl font-bolder;
+}
+
+/* Mint */
+
+.mint-container .right .column .normal {
+  @apply border-label-pink border-half text-label-pink rounded-4px m-12px p-12px font-normal;
+}
+
+.mint-container .right .column .normal h1, .mint-container .right .column .normal p:nth-child(4) {
+  @apply font-bolder;
+}
+
+.mint-container .right .column .normal p {
+  @apply pt-8px;
+}
+
+.mint-container .right .column .title {
+  @apply pl-12px;
+}
+
+.mint-container .recharts-pie-labels {
+  @apply hidden;
+}
+
+/* Hero */
+
+.hero-container {
+  @apply flex flex-col justify-center items-center content-center text-center pt-0 pr-0 pb-10px;
+  @apply pl-0 font-secondary break-words;
+}
+
+.hero-container .content {
+  @apply flex-col;
+}
+
+.hero-container .subtitle {
+  @apply p-0 mt-20px text-center font-primary text-black text-sm font-normal leading-none break-words;
+}
+
+.hero-container .title {
+  @apply p-0 text-center font-primary text-black text-m-lg font-bolder leading-loose break-words;
+}
+
+@screen lg {
+  .hero-container {
+    @apply pb-30px;
+  }
+
+  .hero-container img {
+    @apply mb-30px -mt-30px;
+  }
+
+  .hero-container .content {
+    @apply w-90pc mx-5px max-w-800px;
+  }
+
+  .hero-container .subtitle {
+    @apply text-base leading-normal text-m-lg mt-0;
+  }
+
+  .hero-container .title {
+    @apply text-xl;
+  }
+}
+
+/* TLDR */
+
+.tldr-container {
+  @apply flex p-10pc mb-10pc justify-center;
+  background: linear-gradient(to right, #ffe2fa 0%, #cceff3 100%);
+}
+
+.tldr-container .description {
+  @apply font-primary text-black text-m-lg font-bold;
+}
+
+@screen lg {
+  .tldr-container {
+    @apply py-100px mb-0;
+  }
+
+  .tldr-container .description {
+    @apply text-xl;
+  }
+}
+
+/* Products */
+
+.products-container {
+  @apply pb-30px;
+}
+
+.products-container .cards {
+  @apply flex flex-col items-center justify-center;
+}
+
+.products-container .content {
+  @apply flex-col p-0;
+}
+
+.products-container .title {
+  @apply p-0 text-center font-primary text-black text-m-lg font-bolder break-words;
+}
+
+@screen lg {
+  .products-container {
+    @apply py-100px;
+  }
+
+  .products-container .cards {
+    @apply flex-row mt-40px;
+  }
+
+  .products-container .title {
+    @apply text-xl leading-loose;
+  }
+}
+
+/* Product Cards */
+
+.product-card-container {
+  @apply w-90pc rounded-20px bg-center bg-no-repeat bg-contain p-20px m-10px flex flex-col;
+  @apply items-center justify-center;
+}
+
+.product-card-container .btn {
+  @apply p-5px border-white border border-solid my-15px;
+}
+
+.product-card-container .btn:disabled {
+  @apply bg-white text-black !important;
+}
+
+.product-card-container .description {
+  @apply text-white leading-normal;
+}
+
+.product-card-container .logo {
+  @apply rounded-50pc h-180px w-180px bg-no-repeat bg-contain mt-20px;
+}
+
+.product-card-container .title {
+  @apply leading-normal text-white text-xxl;
+}
+
+@screen lg {
+  .product-card-container {
+    @apply w-25pc;
+  }
+}
+
+/* purgecss end ignore */
