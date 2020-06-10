@@ -57,7 +57,7 @@
     "@pie-dao/eth": "1.2.0",
     "@pie-dao/eth-tailwind": "1.0.0",
     "@pie-dao/if-unless": "1.0.1",
-    "@pie-dao/mint": "1.1.0",
+    "@pie-dao/mint": "1.1.1",
     "@pie-dao/mint-tailwind": "1.0.0",
     "@pie-dao/tailwind": "1.1.2",
     "@pie-dao/utils": "1.0.0",

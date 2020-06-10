@@ -161,11 +161,20 @@
 
 /* PoolBalance */
 
+.pool-balance-container {
+  text-align: left;
+  width: 94%;
+}
+
 .pool-balance-container h1 {
   @apply text-xl font-bolder;
 }
 
 /* Mint */
+
+.mint-container .left .amount input {
+  min-width: 200px;
+}
 
 .mint-container .right .column .normal {
   @apply border-label-pink border-half text-label-pink rounded-4px m-12px p-12px font-normal;

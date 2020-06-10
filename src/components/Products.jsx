@@ -59,6 +59,9 @@ const Products = (props) => {
   const altProps = { ...props };
   altProps.links.liquidity = 'https://btc.piedao.org/#/liquidity';
 
+  const usdAltProps = { ...props };
+  usdAltProps.links.liquidity = 'https://usd.piedao.org/#/liquidity';
+
   return (
     <div className="products-container">
       <div className="content">

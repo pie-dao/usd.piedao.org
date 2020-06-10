@@ -23,13 +23,15 @@ export const mintable = {
 const buildTokens = (mappedAmounts) => ({
   DAI: {
     address: DAIAddress,
-    amountPerUnit: BigNumber(mappedAmounts[DAIAddress]).dividedBy(10 ** 8),
+    decimals: 18,
+    amountPerUnit: BigNumber(mappedAmounts[DAIAddress]).dividedBy(10 ** 18),
     color: '#1caa98',
     symbol: 'DAI',
     weight: BigNumber(20.42),
   },
   sUSD: {
     address: sUSDAddress,
+    decimals: 18,
     amountPerUnit: BigNumber(mappedAmounts[sUSDAddress]).dividedBy(10 ** 18),
     color: '#305cee',
     symbol: 'sUSD',
@@ -37,6 +39,7 @@ const buildTokens = (mappedAmounts) => ({
   },
   TUSD: {
     address: TUSDAddress,
+    decimals: 18,
     amountPerUnit: BigNumber(mappedAmounts[TUSDAddress]).dividedBy(10 ** 18),
     color: '#6f51fd',
     symbol: 'TUSD',
@@ -44,7 +47,8 @@ const buildTokens = (mappedAmounts) => ({
   },
   USDC: {
     address: USDCAddress,
-    amountPerUnit: BigNumber(mappedAmounts[USDCAddress]).dividedBy(10 ** 8),
+    decimals: 6,
+    amountPerUnit: BigNumber(mappedAmounts[USDCAddress]).dividedBy(10 ** 6),
     color: '#d6099b',
     symbol: 'USDC',
     weight: BigNumber(47.22),

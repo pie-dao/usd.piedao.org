@@ -86,7 +86,7 @@ const text = {
     'USD++': {
       description:
         'Diversify your USD position among different representations of USD, such as DAI, USDC, '
-        + 'TUSD, etc.',
+        + 'TUSD',
       linkText: 'Try it now',
     },
   },
