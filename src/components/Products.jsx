@@ -3,7 +3,7 @@ import React from 'react';
 
 import { view } from '@risingstack/react-easy-state';
 
-const ProductCard = ({ name, links: { liquidity }, text: { products } }) => {
+const ProductCard = ({ name, products, url }) => {
   const { description, linkText } = products[name];
 
   const styles = {
@@ -19,7 +19,7 @@ const ProductCard = ({ name, links: { liquidity }, text: { products } }) => {
   };
 
   const handleClick = () => {
-    window.location.href = liquidity;
+    window.location.href = url;
   };
 
   return (
@@ -44,24 +44,16 @@ const ProductCard = ({ name, links: { liquidity }, text: { products } }) => {
 };
 
 ProductCard.propTypes = {
-  links: PropTypes.shape({
-    liquidity: PropTypes.string.isRequired,
+  products: PropTypes.shape({
+    description: PropTypes.string.isRequired,
+    linkText: PropTypes.string.isRequired,
   }).isRequired,
   name: PropTypes.string.isRequired,
-  text: PropTypes.shape({
-    products: PropTypes.object.isRequired,
-  }).isRequired,
+  url: PropTypes.string.isRequired,
 };
 
 const Products = (props) => {
-  const { text: { products: { title } } } = props;
-
-  const altProps = { ...props };
-  altProps.links.liquidity = 'https://btc.piedao.org/#/liquidity';
-
-  const usdAltProps = { ...props };
-  usdAltProps.links.liquidity = 'https://usd.piedao.org/#/liquidity';
-
+  const { text: { products: { title }, products } } = props;
   return (
     <div className="products-container">
       <div className="content">
@@ -70,9 +62,9 @@ const Products = (props) => {
         </div>
 
         <div className="cards">
-          <ProductCard {...altProps} name="BTC++" />
-          <ProductCard {...props} name="AWP++" />
-          <ProductCard {...props} name="USD++" />
+          <ProductCard products={products} url="https://btc.piedao.org/#/liquidity" name="BTC++" />
+          <ProductCard products={products} name="AWP++" />
+          <ProductCard products={products} name="USD++" url="https://usd.piedao.org/#/liquidity" />
         </div>
       </div>
     </div>
