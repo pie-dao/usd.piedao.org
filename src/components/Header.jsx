@@ -13,7 +13,7 @@ const headerStore = store({
 });
 
 const Header = ({ images, links }) => {
-  const { docs, homepage, whitepaper } = links;
+  const { docs, homepage } = links;
   const { logo } = images;
   const { mobileMenuVisible, toggle } = headerStore;
 
