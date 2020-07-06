@@ -33,14 +33,6 @@ const Header = ({ images, links }) => {
         >
           docs
         </a>
-        <a
-          className="link"
-          href={whitepaper}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          whitepaper
-        </a>
         <ConnectButton />
         <div className="mobile-placeholder" />
 
@@ -71,17 +63,6 @@ const Header = ({ images, links }) => {
                     rel="noopener noreferrer"
                   >
                     docs
-                  </a>
-                </li>
-                <li>
-                  <a
-                    onClick={toggle}
-                    className="navbar-item"
-                    href={whitepaper}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    whitepaper
                   </a>
                 </li>
                 <li>
