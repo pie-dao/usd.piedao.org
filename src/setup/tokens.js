@@ -7,7 +7,7 @@ import { pieSmartPool } from '@pie-dao/abis';
 
 export const controllerAddress = '0x9A48BD0EC040ea4f1D3147C025cd4076A2e71e3e'.toLowerCase();
 export const DAIAddress = '0x6B175474E89094C44Da98b954EedeAC495271d0F'.toLowerCase();
-export const sUSDAddress = '0x57ab1e02fee23774580c119740129eac7081e9d3'.toLowerCase();
+export const sUSDAddress = '0x57Ab1ec28D129707052df4dF418D58a2D46d5f51'.toLowerCase();
 export const poolAddress = '0x1Ee383389c621C37Ee5Aa476F88413A815083c5D'.toLowerCase();
 export const TUSDAddress = '0x0000000000085d4780B73119b644AE5ecd22b376'.toLowerCase();
 export const USDCAddress = '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48'.toLowerCase();
